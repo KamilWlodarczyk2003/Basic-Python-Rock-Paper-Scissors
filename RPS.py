@@ -1,4 +1,4 @@
-﻿rock = '''
+rock = '''
     _______
 ---'   ____)
       (_____)
@@ -27,31 +27,35 @@ scissors = '''
 
 import random
 
-Choice=input("Type Rock, Paper or Scissors\n")
+while True:
+    Choice = input("Type Rock, Paper or Scissors, or X to exit\n")
 
-Computer_choice=random.randint(0,2)
+    if Choice == "X":
+        break
 
-print("Your choice:")
+    Computer_choice = random.randint(0,2)
 
-if(Choice=="Rock"):
-    print(rock)
-if(Choice=="Paper"):
-    print(paper)
-if(Choice=="Scissors"):
-    print(scissors)
+    print("Your choice:")
 
-print("Computer choice:")
+    if Choice == "Rock":
+        print(rock)
+    if Choice == "Paper":
+        print(paper)
+    if Choice == "Scissors":
+        print(scissors)
 
-if(Computer_choice==0):
-    print(rock)
-if(Computer_choice==1):
-    print(paper)
-if(Computer_choice==2):
-    print(scissors)
+    print("Computer choice:")
 
-if(Choice=="Rock" and Computer_choice==0) or (Choice=="Paper" and Computer_choice ==1) or (Choice=="Scissors" and Computer_choice==2):
-    print("Draw")
-if(Choice=="Rock" and Computer_choice==1) or (Choice=="Paper" and Computer_choice==2) or(Choice=="Scissors" and Computer_choice==0):
-    print("You lose")
-if(Choice=="Rock" and Computer_choice==2) or (Choice=="Paper" and Computer_choice==0) or(Choice=="Scissors" and Computer_choice==1):
-    print("You win")
+    if Computer_choice == 0:
+        print(rock)
+    if Computer_choice == 1:
+        print(paper)
+    if Computer_choice == 2:
+        print(scissors)
+
+    if (Choice == "Rock" and Computer_choice == 0) or (Choice == "Paper" and Computer_choice == 1) or (Choice == "Scissors" and Computer_choice == 2):
+        print("Draw")
+    if (Choice == "Rock" and Computer_choice == 1) or (Choice == "Paper" and Computer_choice == 2) or (Choice == "Scissors" and Computer_choice == 0):
+        print("You lose")
+    if (Choice == "Rock" and Computer_choice == 2) or (Choice == "Paper" and Computer_choice == 0) or (Choice == "Scissors" and Computer_choice == 1):
+        print("You win")
